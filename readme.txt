@@ -4,7 +4,7 @@ Donate link: http://www.onlinerel.com/wordpress-plugins/
 Tags: widget, jokes, video, funny, funny photos, funny jokes, funny video,  post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
 Requires at least: 2.5
 Tested up to: 3.0.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.
@@ -35,6 +35,8 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
+ = 1.2 =
+ Fix bugs.
 
  = 1.1 =
 Added more  functions.

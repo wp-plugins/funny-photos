@@ -3,13 +3,13 @@
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
-Version: 1.1
+Version: 1.2
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 License: GPL2
 */
-define(Funny_photos_READER_URL_RSS_DEFAULT, 'http://fun.onlinerel.com/category/best-photos/feed/rss/');
-define(Funny_photos_READER_TITLE, 'Funny photos');
+define(Funny_photos_URL_RSS_DEFAULT, 'http://fun.onlinerel.com/category/best-photos/feed/rss/');
+define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
 define(Funny_photos_MAX_SHOWN_content, 3);
 
@@ -21,11 +21,11 @@ function Funny_photos_widget_ShowRss($args)
 	$options = get_option('Funny_photos_widget');
 
 	if( $options == false ) {
-		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_READER_TITLE;
+		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$options[ 'Funny_photos_widget_RSS_count_widg' ] = Funny_photos_MAX_SHOWN_widg;
 	}
 
- $feed = Funny_photos_READER_URL_RSS_DEFAULT;
+ $feed = Funny_photos_URL_RSS_DEFAULT;
 
 	$title = $options[ 'Funny_photos_widget_url_title' ];
 	$rss = fetch_feed( $feed );
@@ -64,7 +64,7 @@ function Funny_photos_widget_Admin()
 	$options = $newoptions = get_option('Funny_photos_widget');	
 	//default settings
 	if( $options == false ) {
-		$newoptions[ 'Funny_photos_widget_url_title' ] = Funny_photos_READER_TITLE;
+		$newoptions[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$newoptions['Funny_photos_widget_RSS_count_widg'] = Funny_photos_MAX_SHOWN_widg;		
 		 $newoptions['Funny_photos_widget_RSS_count_content'] = Funny_photos_MAX_SHOWN_content;
 	}
@@ -111,14 +111,14 @@ function Funny_photos_ActionLink( $links, $file ) {
 	}
 
 
-add_filter('the_content', 'Funny_photos_content', 40);
+add_filter('the_content', 'Funny_photos_content', 48);
 
 function Funny_photos_content($content) {
 	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
 
 	$options = get_option('Funny_photos_widget');
 	if( $options == false ) {
-		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_READER_TITLE;
+		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$options[ 'Funny_photos_widget_RSS_count_widg' ] = Funny_photos_MAX_SHOWN_widg;
 		 $options[ 'Funny_photos_widget_RSS_count_content' ] = Funny_photos_MAX_SHOWN_content;
 	}
@@ -126,7 +126,7 @@ if($options['Funny_photos_widget_RSS_count_content'] !=0){
 $pldir = WP_PLUGIN_URL.'/'.basename(dirname(__FILE__)); 
 $images = $pldir.'/images/';
 	$content .= '<div style="clear:both; margin:3px;"></div>';
- $feed = Funny_photos_READER_URL_RSS_DEFAULT;
+ $feed = Funny_photos_URL_RSS_DEFAULT;
  	$title = $options[ 'Funny_photos_widget_url_title' ];
 $rss = fetch_feed( $feed );
 		if ( !is_wp_error( $rss ) ) :
@@ -162,7 +162,7 @@ function Funny_photos_options() {
 		$options = $newoptions = get_option('Funny_photos_widget');	
 	//default settings
 	if( $options == false ) {
-		$newoptions[ 'Funny_photos_widget_url_title' ] = Funny_photos_READER_TITLE;
+		$newoptions[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$newoptions['Funny_photos_widget_RSS_count_widg'] = Funny_photos_MAX_SHOWN_widg;		
 		$newoptions['Funny_photos_widget_RSS_count_content'] = Funny_photos_MAX_SHOWN_content;		
 	}
@@ -195,7 +195,7 @@ function Funny_photos_options() {
 
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
-<p> <h3>Add the widget "Funny photos"  to your sidebar from Appearance->Widgets and configure the widget options.</h3></p>
+<p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
  <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
