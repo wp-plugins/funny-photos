@@ -1,25 +1,20 @@
 <?php
 /*
 Plugin Name: Funny photos
+Version: 1.3
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
-Version: 1.2
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
-License: GPL2
 */
 define(Funny_photos_URL_RSS_DEFAULT, 'http://fun.onlinerel.com/category/best-photos/feed/rss/');
 define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
 define(Funny_photos_MAX_SHOWN_content, 3);
 
-
 function Funny_photos_widget_ShowRss($args)
 {
- //	$magpierss = ABSPATH.'wp-content/plugins/funny-photos/rss.php';
-// require_once('rss.php');
 	$options = get_option('Funny_photos_widget');
-
 	if( $options == false ) {
 		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$options[ 'Funny_photos_widget_RSS_count_widg' ] = Funny_photos_MAX_SHOWN_widg;
@@ -192,11 +187,15 @@ function Funny_photos_options() {
 	 	</form> 
 		Set <b>0</b> to disable boxes after the posts.
 <hr />
-
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
 <p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
+ <h2>Blog Promotion</h2>
+<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
+Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
+ <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
+ <hr />
  <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
 Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
