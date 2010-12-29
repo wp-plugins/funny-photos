@@ -242,4 +242,5 @@ function Funny_photos_widget_Init()
   register_widget_control(__('Funny photos'), 'Funny_photos_widget_Admin', 500, 250);
 }
 add_action("plugins_loaded", "Funny_photos_widget_Init");
+
 ?>
