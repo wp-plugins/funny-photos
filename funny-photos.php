@@ -1,12 +1,13 @@
 <?php
 /*
 Plugin Name: Funny photos
-Version: 1.3
+Version: 1.4
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
+
 define(Funny_photos_URL_RSS_DEFAULT, 'http://fun.onlinerel.com/category/best-photos/feed/rss/');
 define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);

@@ -7,7 +7,6 @@ Tested up to: 3.0.3
 Stable tag: trunk
 
 Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
-Add Funny Photos to your sidebar on your blog using  a widget.
  
 == Description ==
 
@@ -34,6 +33,10 @@ If you're interested in seeing what a default installation of Funny Photos has t
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
+
+ = 1.4 =
+
+Tested upto 3.1 WP 
 
  = 1.3 =
 
