@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Funny photos
-Version: 1.4.1
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
+Version: 1.4.2
 Description: Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/

@@ -34,22 +34,17 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 1.4.1 =
-
+ = 1.4.2 =
 Tested upto 3.1 WP 
 
  = 1.3 =
-
 Changed works upto 3.0.3 WP 
 
  = 1.2 =
-
  Fix bugs.
 
  = 1.1 =
-
 Added more  functions.
 
  = 1.0 =
-
  First stable version.
