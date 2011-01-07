@@ -6,6 +6,7 @@ Requires at least: 2.5
 Tested up to: 3.1
 Stable tag: trunk
 
+
 Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
  
 == Description ==
@@ -34,7 +35,7 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 1.4.2 =
+ = 1.5 =
 Tested upto 3.1 WP 
 
  = 1.3 =
@@ -47,4 +48,4 @@ Changed works upto 3.0.3 WP
 Added more  functions.
 
  = 1.0 =
- First stable version.
+ First stable version
