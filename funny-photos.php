@@ -2,7 +2,7 @@
 /*
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 1.5
+Version: 1.6
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information. 
 Author: A.Kilius
@@ -46,7 +46,7 @@ function Funny_photos_widget_ShowRss($args)
 	  		endforeach;		
 	}
 			$output .= '</ul> ';	 
-
+                                                                                                                           
 	extract($args);	
 	?>
 	<?php echo $before_widget; ?>
