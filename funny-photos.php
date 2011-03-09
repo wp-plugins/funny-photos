@@ -2,14 +2,14 @@
 /*
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 1.6
+Version: 1.7
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
-Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information. 
+Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.                                                                                            
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
 
-define(Funny_photos_URL_RSS_DEFAULT, 'http://fun.onlinerel.com/category/best-photos/feed/rss/');
+define(Funny_photos_URL_RSS_DEFAULT, 'http://www.springfail.com/fail/best-photos/feed/');
 define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
 define(Funny_photos_MAX_SHOWN_content, 3);
@@ -107,9 +107,7 @@ function Funny_photos_ActionLink( $links, $file ) {
 		return $links;
 	}
 
-
 add_filter('the_content', 'Funny_photos_content', 48);
-
 function Funny_photos_content($content) {
 	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
 
@@ -224,11 +222,11 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
   <hr />
  <h2>WP Social Bookmarking</h2>
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.</b></p>
-<p><b>Plugin suport sharing your posts feed on <a href="http://www.easyfreeads.com/">EasyFreeAds</a>. This helps to promote your blog and get more traffic.</b></p>
+<p><b>Plugin suport sharing your posts feed on <a href="http://www.HomeShopWorld.com/">Home Shop World</a>. This helps to promote your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:
 <ul>
 	<li><a target="_blank" href="http://www.onlinerel.com/">OnlineRel</a></li>
-	<li><a target="_blank" href="http://www.easyfreeads.com/">Easy Free Ads</a></li>
+	<li><a target="_blank" href="http://www.HomeShopWorld.com/">Home Shop World</a></li>
 	<li><a target="_blank" href="http://www.worldestatesite.com/">World Estate Site</a></li>
 </ul>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/wp-social-bookmarking/">WP Social Bookmarking</h3></a>

@@ -35,11 +35,15 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
+ = 1.7 =
+Tested upto 3.1 WP 
+Changed springfail.com feed
+
  = 1.6 =
 Updated 
 
  = 1.5 =
-Tested upto 3.1 WP 
+Tested upto 3.0.5 WP 
 
  = 1.3 =
 Changed works upto 3.0.3 WP 
