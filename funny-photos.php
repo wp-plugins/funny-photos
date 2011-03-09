@@ -2,7 +2,7 @@
 /*
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 1.7
+Version: 1.7.1
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.                                                                                            
 Author: A.Kilius
@@ -185,14 +185,14 @@ function Funny_photos_options() {
 				<input type="submit" name="b_update" class="button-primary" value="  Save Changes  " />
 	 </label></p>
 	 	</form> 
-		Set <b>0</b> to disable boxes after the posts.
-<hr />
+		Set <b>0</b> to disable boxes after the posts.                                                                      
+<hr />                                        
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
 <p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
  <h2>Blog Promotion</h2>
-<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
+<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free!                                                                                                                                                                                                                   
 Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
  <hr />
