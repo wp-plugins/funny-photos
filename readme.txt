@@ -1,9 +1,9 @@
 === Funny Photos ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: widget, jokes, video, funny, funny photos, funny jokes, funny video,  post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
+Tags: widget, jokes, video, image, images, funny, funny photos, funny jokes, funny video,  post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
 Requires at least: 2.5
-Tested up to: 3.1
+Tested up to: 3.1.1
 Stable tag: trunk
 
 
@@ -35,6 +35,9 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
+ = 1.8 =
+Tested upto 3.1.1 WP        
+
  = 1.7.1 =
 Tested upto 3.1 WP                                                                                                                           
 Changed springfail.com feed                                                                                                                              
@@ -56,3 +59,9 @@ Added more  functions.
 
  = 1.0 =
  First stable version
+
+
+== Upgrade Notice ==
+  
+= 1.8 =
+Automatically upgrade the plugin and all previous settings should remain intact.

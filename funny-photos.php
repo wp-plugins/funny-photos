@@ -2,7 +2,7 @@
 /*
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 1.7.1
+Version: 1.8
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.                                                                                            
 Author: A.Kilius
@@ -13,6 +13,7 @@ define(Funny_photos_URL_RSS_DEFAULT, 'http://www.springfail.com/fail/best-photos
 define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
 define(Funny_photos_MAX_SHOWN_content, 3);
+define(Funny_photos_width_SHOWN_content, 100);
 
 function Funny_photos_widget_ShowRss($args)
 {
@@ -64,11 +65,14 @@ function Funny_photos_widget_Admin()
 		$newoptions[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$newoptions['Funny_photos_widget_RSS_count_widg'] = Funny_photos_MAX_SHOWN_widg;		
 		 $newoptions['Funny_photos_widget_RSS_count_content'] = Funny_photos_MAX_SHOWN_content;
+		 $newoptions['Funny_photos_width_SHOWN_content'] = Funny_photos_width_SHOWN_content;
+		 
 	}
 	if ( $_POST["Funny_photos_widget-submit"] ) {
 		$newoptions['Funny_photos_widget_url_title'] = strip_tags(stripslashes($_POST["Funny_photos_widget_url_title"]));
 		$newoptions['Funny_photos_widget_RSS_count_widg'] = strip_tags(stripslashes($_POST["Funny_photos_widget_RSS_count_widg"]));
 		$newoptions[ 'Funny_photos_widget_RSS_count_content' ]  = $newoptions[ 'Funny_photos_widget_RSS_count_content'];
+          $newoptions[ 'Funny_photos_width_SHOWN_content' ]  = $newoptions[ 'Funny_photos_width_SHOWN_content'];
 	}	
 		
 	if ( $options != $newoptions ) {
@@ -116,13 +120,15 @@ function Funny_photos_content($content) {
 		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$options[ 'Funny_photos_widget_RSS_count_widg' ] = Funny_photos_MAX_SHOWN_widg;
 		 $options[ 'Funny_photos_widget_RSS_count_content' ] = Funny_photos_MAX_SHOWN_content;
+		$options['Funny_photos_width_SHOWN_content'] = Funny_photos_width_SHOWN_content;
 	}
 if($options['Funny_photos_widget_RSS_count_content'] !=0){
 $pldir = WP_PLUGIN_URL.'/'.basename(dirname(__FILE__)); 
 $images = $pldir.'/images/';
-	$content .= '<div style="clear:both; margin:3px;"></div>';
+	$content .= '<div style="clear:both; margin:2px;"></div>';
  $feed = Funny_photos_URL_RSS_DEFAULT;
  	$title = $options[ 'Funny_photos_widget_url_title' ];
+	$width = $options['Funny_photos_width_SHOWN_content'];
 $rss = fetch_feed( $feed );
 		if ( !is_wp_error( $rss ) ) :
 			$maxitems = $rss->get_item_quantity($options['Funny_photos_widget_RSS_count_content'] );
@@ -137,7 +143,7 @@ $rss = fetch_feed( $feed );
 $content .= '<a href="';
 $content .=  $item->get_permalink();
  $content .= '"  title="'.$titlee.'" target="_blank">';
-  $content .= '<img src="'.$enclosure->link.'"  alt="'.$titlee.'"  title="'.$titlee.'" /></a> ';
+  $content .= '<img src="'.$enclosure->link.'"  width="'.$width.'" alt="'.$titlee.'"  title="'.$titlee.'" /></a> ';
 	$content .= ' &nbsp; '; 
 	}
 	  		endforeach;		
@@ -160,19 +166,22 @@ function Funny_photos_options() {
 		$newoptions[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$newoptions['Funny_photos_widget_RSS_count_widg'] = Funny_photos_MAX_SHOWN_widg;		
 		$newoptions['Funny_photos_widget_RSS_count_content'] = Funny_photos_MAX_SHOWN_content;		
+		$newoptions['Funny_photos_width_SHOWN_content'] = Funny_photos_width_SHOWN_content;
 	}
 	if ( $_POST["b_update"] ) {
 		$newoptions['Funny_photos_widget_url_title'] = $newoptions[ 'Funny_photos_widget_url_title' ] ;
 		$newoptions['Funny_photos_widget_RSS_count_widg'] = $newoptions['Funny_photos_widget_RSS_count_widg'];
 		$newoptions['Funny_photos_widget_RSS_count_content'] = strip_tags(stripslashes($_POST["Funny_photos_widget_RSS_count_content"]));
-	}	
-		
+		$newoptions[ 'Funny_photos_width_SHOWN_content' ]  = strip_tags(stripslashes($_POST[ 'Funny_photos_width_SHOWN_content']));
+			}	
+
 	if ( $options != $newoptions ) {
 		$options = $newoptions;
 		update_option('Funny_photos_widget', $options);		
 	}
 
 	$Funny_photos_widget_RSS_count_content = $options['Funny_photos_widget_RSS_count_content'];
+	$Funny_photos_width_SHOWN_content = $options['Funny_photos_width_SHOWN_content'];
 
 	echo "<div class='updated fade'><p><strong>Options saved</strong></p></div>";
  
@@ -181,9 +190,11 @@ function Funny_photos_options() {
 	<h2>Funny photos Settings </h2>
 
 	<form method="post" action="#">	 
-	<p><label for="Funny_photos_widget_RSS_count_content"><?php _e('Count boxes To Show after the posts:'); ?> (1-9) <input  id="Funny_photos_widget_RSS_count_content" name="Funny_photos_widget_RSS_count_content" size="2" maxlength="1" type="text" value="<?php echo $Funny_photos_widget_RSS_count_content?>" />
-				<input type="submit" name="b_update" class="button-primary" value="  Save Changes  " />
-	 </label></p>
+	<p><label for="Funny_photos_widget_RSS_count_content"><?php _e('Count boxes To Show after the posts:'); ?> (1-9) <input  id="Funny_photos_widget_RSS_count_content" name="Funny_photos_widget_RSS_count_content" size="2" maxlength="1" type="text" value="<?php echo $Funny_photos_widget_RSS_count_content;?>" />				
+	 </label>
+	 <label for="Funny_photos_width_SHOWN_content"><?php _e('Foto width:'); ?> (default 100px) <input  id="Funny_photos_width_SHOWN_content" name="Funny_photos_width_SHOWN_content" size="3" maxlength="3" type="text" value="<?php echo $Funny_photos_width_SHOWN_content;?>" />				
+	 </label>
+	 <input type="submit" name="b_update" class="button-primary" value="  Save Changes  " /></p>
 	 	</form> 
 		Set <b>0</b> to disable boxes after the posts.                                                                      
 <hr />                                        
@@ -192,11 +203,10 @@ Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
 <p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
  <h2>Blog Promotion</h2>
-<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free!                                                                                                                                                                                                                   
+<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free!   
 Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
- <hr />
- <h2>Funny video online</h2>
+ <hr />  <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
 Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-video-online/">Funny video online</h3></a> 
