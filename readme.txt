@@ -51,6 +51,9 @@ Updated
  = 1.5 =
 Tested upto 3.0.5 WP 
 
+ = 1.4 =
+ Fix bugs.
+
  = 1.3 =
 Changed works upto 3.0.3 WP 
 
