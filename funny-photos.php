@@ -2,7 +2,7 @@
 /*
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 1.8
+Version: 1.9
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.                                                                                            
 Author: A.Kilius
@@ -24,14 +24,13 @@ function Funny_photos_widget_ShowRss($args)
 	}
 
  $feed = Funny_photos_URL_RSS_DEFAULT;
-
 	$title = $options[ 'Funny_photos_widget_url_title' ];
 	$rss = fetch_feed( $feed );
 		if ( !is_wp_error( $rss ) ) :
 			$maxitems = $rss->get_item_quantity($options['Funny_photos_widget_RSS_count_widg'] );
 			$items = $rss->get_items( 4, $maxitems );
 				endif;
-	 $output .= '<ul>';	
+	 $output .= '<!-- WP plugin Funny photos --> <ul>';	
 	if($items) { 
  			foreach ( $items as $item ) :
 				// Create post object
@@ -46,8 +45,7 @@ function Funny_photos_widget_ShowRss($args)
 	}
 	  		endforeach;		
 	}
-			$output .= '</ul> ';	 
-                                                                                                                           
+			$output .= '</ul> ';	                                                                                                                            
 	extract($args);	
 	?>
 	<?php echo $before_widget; ?>
@@ -95,7 +93,6 @@ function Funny_photos_widget_Admin()
 }
 
 add_action('admin_menu', 'Funny_photos_menu');
-
 function Funny_photos_menu() {
 	add_options_page('Funny photos', 'Funny photos', 8, __FILE__, 'Funny_photos_options');
 }
@@ -150,8 +147,7 @@ $content .=  $item->get_permalink();
 	}
 	  $content .= '<div style="clear:both; margin:3px;"></div>';
 }
-    }		
-	
+    }			
 	return $content;
 }
 
@@ -188,7 +184,6 @@ function Funny_photos_options() {
 	?>
 	<div class="wrap">
 	<h2>Funny photos Settings </h2>
-
 	<form method="post" action="#">	 
 	<p><label for="Funny_photos_widget_RSS_count_content"><?php _e('Count boxes To Show after the posts:'); ?> (1-9) <input  id="Funny_photos_widget_RSS_count_content" name="Funny_photos_widget_RSS_count_content" size="2" maxlength="1" type="text" value="<?php echo $Funny_photos_widget_RSS_count_content;?>" />				
 	 </label>
@@ -229,8 +224,7 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 		<h2>Recipe of the Day</h2>
 <p><b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/recipe-of-the-day/">Recipe of the Day</h3></a>
-  <hr />
- <h2>WP Social Bookmarking</h2>
+  <hr /> <h2>WP Social Bookmarking</h2>
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.</b></p>
 <p><b>Plugin suport sharing your posts feed on <a href="http://www.HomeShopWorld.com/">Home Shop World</a>. This helps to promote your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:

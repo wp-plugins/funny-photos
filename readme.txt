@@ -6,7 +6,6 @@ Requires at least: 2.5
 Tested up to: 3.1.1
 Stable tag: trunk
 
-
 Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
  
 == Description ==
@@ -35,12 +34,16 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 1.8 =
+ = 1.9 =
 Tested upto 3.1.1 WP        
+New function created: change photo size.
 
- = 1.7.1 =
+ = 1.8. =
 Tested upto 3.1 WP                                                                                                                           
 Changed springfail.com feed                                                                                                                              
+
+ = 1.7 =
+Updated plugin
 
  = 1.6 =
 Updated 
@@ -63,5 +66,7 @@ Added more  functions.
 
 == Upgrade Notice ==
   
-= 1.8 =
+= 1.9 =
 Automatically upgrade the plugin and all previous settings should remain intact.
+Tested upto 3.1.1 WP      
+New function created: change photo size.
