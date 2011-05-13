@@ -1,14 +1,14 @@
 <?php
 /*
 Plugin Name: Funny photos
-Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Version: 2.0
+Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.                                                                                            
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
-
+ 
 define(Funny_photos_URL_RSS_DEFAULT, 'http://fun.onlinerel.com/category/best-photos/feed/');
 define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
@@ -35,6 +35,7 @@ function Funny_photos_widget_ShowRss($args)
  			foreach ( $items as $item ) :
 				// Create post object
   $titlee = trim($item->get_title()); 
+
   if ($enclosure = $item->get_enclosure())
 	{ 
  $output .= '<li> <a href="';
@@ -45,14 +46,17 @@ function Funny_photos_widget_ShowRss($args)
 	}
 	  		endforeach;		
 	}
-			$output .= '</ul> ';	                                                                                                                            
-	extract($args);	
-	?>
-	<?php echo $before_widget; ?>
-	<?php echo $before_title . $title . $after_title; ?>	
-	<?php echo $output; ?>
-	<?php echo $after_widget; ?>
-	<?php	
+ $output .= '</ul> ';	    
+                                                                                                                       
+extract($args);	
+
+ echo $before_widget;  
+
+ echo $before_title . $title . $after_title;  
+
+ echo $output;  
+
+ echo $after_widget;  
 }
 
 function Funny_photos_widget_Admin()
@@ -109,6 +113,7 @@ function Funny_photos_content($content) {
 	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
 
 	$options = get_option('Funny_photos_widget');
+
 	if( $options == false ) {
 		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$options[ 'Funny_photos_widget_RSS_count_widg' ] = Funny_photos_MAX_SHOWN_widg;
@@ -193,19 +198,24 @@ function Funny_photos_options() {
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
 <p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
- <h2>Blog Promotion</h2>
-<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free!   
-Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
- <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
- <hr />  <h2>Funny video online</h2>
+
+  <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
 Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-video-online/">Funny video online</h3></a> 
   <hr />
-   		<h2>Joke of the Day</h2>
+     		<h2>Joke of the Day</h2>
 <p><b>Plugin "Joke of the Day" displays categorized jokes on your blog. There are over 40,000 jokes in 40 categories. Jokes are saved on our database, so you don't need to have space for all that information. </b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/joke-of-the-day/">Joke of the Day</h3></a>
     <hr />
+
+ <h2>Blog Promotion</h2>
+<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free!   
+Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
+ <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
+ <hr />
+                                       
+
  <h2>Real Estate Finder</h2>
 <p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
 Real estate search for U.S., Canada, UK, Australia</b> </p>
@@ -220,7 +230,8 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 		<h2>Recipe of the Day</h2>
 <p><b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/recipe-of-the-day/">Recipe of the Day</h3></a>
-  <hr /> <h2>WP Social Bookmarking</h2>
+  <hr /> 
+  <h2>WP Social Bookmarking</h2>
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.</b></p>
 <p><b>Plugin suport sharing your posts feed on <a href="http://www.HomeShopWorld.com/">Home Shop World</a>. This helps to promote your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:

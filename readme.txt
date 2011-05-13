@@ -82,3 +82,4 @@ Changed http://fun.onlinerel.com  feed.
 Automatically upgrade the plugin and all previous settings should remain intact.
 Tested upto 3.1.1 WP                                                              
 New function created: change photo size.
+
