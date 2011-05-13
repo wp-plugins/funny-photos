@@ -2,14 +2,14 @@
 /*
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 1.9
+Version: 2.0
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.                                                                                            
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
 
-define(Funny_photos_URL_RSS_DEFAULT, 'http://www.springfail.com/fail/best-photos/feed/');
+define(Funny_photos_URL_RSS_DEFAULT, 'http://fun.onlinerel.com/category/best-photos/feed/');
 define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
 define(Funny_photos_MAX_SHOWN_content, 3);
@@ -64,7 +64,6 @@ function Funny_photos_widget_Admin()
 		$newoptions['Funny_photos_widget_RSS_count_widg'] = Funny_photos_MAX_SHOWN_widg;		
 		 $newoptions['Funny_photos_widget_RSS_count_content'] = Funny_photos_MAX_SHOWN_content;
 		 $newoptions['Funny_photos_width_SHOWN_content'] = Funny_photos_width_SHOWN_content;
-		 
 	}
 	if ( $_POST["Funny_photos_widget-submit"] ) {
 		$newoptions['Funny_photos_widget_url_title'] = strip_tags(stripslashes($_POST["Funny_photos_widget_url_title"]));
@@ -81,11 +80,8 @@ function Funny_photos_widget_Admin()
 	$Funny_photos_widget_RSS_count_widg = $options['Funny_photos_widget_RSS_count_widg'];
 	
 	?><form method="post" action="">	
-
-	<p><label for="Funny_photos_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="Funny_photos_widget_url_title" name="Funny_photos_widget_url_title" type="text" value="<?php echo $Funny_photos_widget_url_title; ?>" /></label></p>
- 
-	<p><label for="Funny_photos_widget_RSS_count_widg"><?php _e('Count Items To Show:'); ?> <input  id="Funny_photos_widget_RSS_count_widg" name="Funny_photos_widget_RSS_count_widg" size="2" maxlength="2" type="text" value="<?php echo $Funny_photos_widget_RSS_count_widg?>" /></label></p>
-	
+	<p><label for="Funny_photos_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="Funny_photos_widget_url_title" name="Funny_photos_widget_url_title" type="text" value="<?php echo $Funny_photos_widget_url_title; ?>" /></label></p> 
+	<p><label for="Funny_photos_widget_RSS_count_widg"><?php _e('Count Items To Show:'); ?> <input  id="Funny_photos_widget_RSS_count_widg" name="Funny_photos_widget_RSS_count_widg" size="2" maxlength="2" type="text" value="<?php echo $Funny_photos_widget_RSS_count_widg?>" /></label></p>	
 	<br clear='all'></p>
 	<input type="hidden" id="Funny_photos_widget-submit" name="Funny_photos_widget-submit" value="1" />	
 	</form>
@@ -245,5 +241,4 @@ function Funny_photos_widget_Init()
   register_widget_control(__('Funny photos'), 'Funny_photos_widget_Admin', 500, 250);
 }
 add_action("plugins_loaded", "Funny_photos_widget_Init");
-
 ?>

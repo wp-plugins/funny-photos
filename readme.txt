@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.onlinerel.com/wordpress-plugins/
 Tags: widget, jokes, video, image, images, funny, funny photos, funny jokes, funny video,  post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
 Requires at least: 2.5
-Tested up to: 3.1.1
+Tested up to: 3.1.2
 Stable tag: trunk
 
 Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
@@ -33,6 +33,10 @@ If you're interested in seeing what a default installation of Funny Photos has t
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
+
+ = 2.0 =
+Tested upto 3.1.2 WP        
+Changed http://fun.onlinerel.com  feed    
 
  = 1.9 =
 Tested upto 3.1.1 WP        
@@ -68,6 +72,11 @@ Added more  functions.
 
 
 == Upgrade Notice ==
+  
+= 2.0 =
+Automatically upgrade the plugin and all previous settings should remain intact.
+Tested upto 3.1.2 WP      
+Changed http://fun.onlinerel.com  feed.
   
 = 1.9 =
 Automatically upgrade the plugin and all previous settings should remain intact.
