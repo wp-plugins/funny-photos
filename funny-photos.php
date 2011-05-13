@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Funny photos
-Version: 2.0
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
-Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.                                                                                            
+Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.   
+Version: 2.1
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -231,7 +231,7 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 <p><b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/recipe-of-the-day/">Recipe of the Day</h3></a>
   <hr /> 
-  <h2>WP Social Bookmarking</h2>
+                        <h2>WP Social Bookmarking</h2>
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.</b></p>
 <p><b>Plugin suport sharing your posts feed on <a href="http://www.HomeShopWorld.com/">Home Shop World</a>. This helps to promote your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:

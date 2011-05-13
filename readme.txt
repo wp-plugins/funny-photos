@@ -34,9 +34,11 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
+ = 2.1 =
+Changed http://fun.onlinerel.com  feed    
+
  = 2.0 =
 Tested upto 3.1.2 WP        
-Changed http://fun.onlinerel.com  feed    
 
  = 1.9 =
 Tested upto 3.1.1 WP        
@@ -72,11 +74,14 @@ Added more  functions.
 
 
 == Upgrade Notice ==
+
+= 2.1 =
+Automatically upgrade the plugin and all previous settings should remain intact.
+Changed http://fun.onlinerel.com  feed.
   
 = 2.0 =
 Automatically upgrade the plugin and all previous settings should remain intact.
 Tested upto 3.1.2 WP                                                  
-Changed http://fun.onlinerel.com  feed.
   
 = 1.9 =
 Automatically upgrade the plugin and all previous settings should remain intact.
