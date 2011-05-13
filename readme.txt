@@ -75,10 +75,10 @@ Added more  functions.
   
 = 2.0 =
 Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.2 WP      
+Tested upto 3.1.2 WP                                                  
 Changed http://fun.onlinerel.com  feed.
   
 = 1.9 =
 Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.1 WP      
+Tested upto 3.1.1 WP                                                              
 New function created: change photo size.
