@@ -34,7 +34,7 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
-= 2.2 =
+= 2.2.1 =
 Tested upto 3.1.3 WP     
 Fixed bugs in widget
 
@@ -79,7 +79,7 @@ Added more  functions.
 
 == Upgrade Notice ==
 
-= 2.2 =
+= 2.2.1 =
 Automatically upgrade the plugin and all previous settings should remain intact.
 Tested upto 3.1.3 WP     
 Fixed bugs in widget
@@ -96,4 +96,3 @@ Tested upto 3.1.2 WP
 Automatically upgrade the plugin and all previous settings should remain intact.
 Tested upto 3.1.1 WP                                                              
 New function created: change photo size.
-

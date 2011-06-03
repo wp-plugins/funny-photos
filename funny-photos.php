@@ -4,7 +4,7 @@ Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information.   
-Version: 2.2
+Version: 2.2.1
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -147,7 +147,6 @@ $content .=  $item->get_permalink();
 	return $content;
 }
 
-
 function Funny_photos_options() {	
 	?>
 	<div class="wrap">
@@ -169,13 +168,10 @@ function Funny_photos_options() {
 		$options = $newoptions;
 		update_option('Funny_photos_widget', $options);		
 	}
-
 	$Funny_photos_widget_RSS_count_content = $options['Funny_photos_widget_RSS_count_content'];
 	$Funny_photos_width_SHOWN_content = $options['Funny_photos_width_SHOWN_content'];
-
 	echo "<div class='updated fade'><p><strong>Options saved</strong></p></div>";
- 
-	?>
+ 	?>
 	<div class="wrap">
 	<h2>Funny photos Settings </h2>
 	<form method="post" action="#">	 
@@ -191,7 +187,6 @@ function Funny_photos_options() {
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
 <p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
-
   <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
 Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
@@ -238,7 +233,6 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 	</div>
 	<?php
 }
-
 function Funny_photos_widget_Init()
 {
   register_sidebar_widget(__('Funny photos'), 'Funny_photos_widget_ShowRss');
