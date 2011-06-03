@@ -1,7 +1,7 @@
 === Funny Photos ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: widget, jokes, video, image, images, funny, funny photos, funny jokes, funny video,  post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
+Tags: funny photos, funny jokes, funny video, widget, jokes, video, image, images, funny, post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
 Requires at least: 2.5
 Tested up to: 3.1.3
 Stable tag: trunk
@@ -34,7 +34,7 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
-= 2.2.1 =
+= 2.2.2 =
 Tested upto 3.1.3 WP     
 Fixed bugs in widget
 
@@ -79,7 +79,7 @@ Added more  functions.
 
 == Upgrade Notice ==
 
-= 2.2.1 =
+= 2.2.2 =
 Automatically upgrade the plugin and all previous settings should remain intact.
 Tested upto 3.1.3 WP     
 Fixed bugs in widget
