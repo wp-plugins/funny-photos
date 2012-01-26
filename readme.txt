@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.onlinerel.com/wordpress-plugins/
 Tags: funny photos, funny jokes, funny video, widget, jokes, video, image, images, funny, post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
 Requires at least: 2.5
-Tested up to: 3.1.3
+Tested up to: 3.3.1
 Stable tag: trunk
 
 Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
@@ -15,7 +15,7 @@ Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved 
 
 <b>Try the Demo</b>
 
-If you're interested in seeing what a default installation of Funny Photos has to offer, try out the <a target="_blank" href="http://fun.onlinerel.com/">Funny Photos</a>
+If you're interested in seeing what a default installation of Funny Photos has to offer, try out the <a target="_blank" href="http://www.weekendjoy.com/">Funny Photos</a>
 
 == Installation ==
 
@@ -33,6 +33,10 @@ If you're interested in seeing what a default installation of Funny Photos has t
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
+
+= 2.3 =
+Tested up to 3.3.1 WP     
+Updated script
 
 = 2.2.2 =
 Tested upto 3.1.3 WP     
@@ -75,24 +79,3 @@ Added more  functions.
 
 = 1.0 =
  First stable version
-
-
-== Upgrade Notice ==
-
-= 2.2.2 =
-Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.3 WP     
-Fixed bugs in widget
-
-= 2.1 =
-Automatically upgrade the plugin and all previous settings should remain intact.
-Changed http://fun.onlinerel.com  feed.
-  
-= 2.0 =
-Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.2 WP                                                  
-  
-= 1.9 =
-Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.1 WP                                                              
-New function created: change photo size.
