@@ -12,11 +12,7 @@ Plugin "Funny Photos" displays Best photos of the day and Funny photos on your b
 
 Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved on our database, so you don't need to have space for all that information. 
-
-<b>Try the Demo</b>
-
-If you're interested in seeing what a default installation of Funny Photos has to offer, try out the <a target="_blank" href="http://www.weekendjoy.com/">Funny Photos</a>
-
+ 
 == Installation ==
 
 1. Upload the folder funny-photos to the /wp-content/plugins/ directory 
@@ -27,11 +23,7 @@ If you're interested in seeing what a default installation of Funny Photos has t
 
 1. Funny Photos Widget
 2. Funny Photos boxes after the posts
-
-== Frequently Asked Questions ==
-
-Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
-
+ 
 == Changelog ==
 
 = 2.3 =
