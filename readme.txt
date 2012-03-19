@@ -26,48 +26,51 @@ Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved 
  
 == Changelog ==
 
+= 2.4 =
+* Updated code
+
 = 2.3 =
-Tested up to 3.3.1 WP     
-Updated script
+* Tested up to 3.3.1 WP     
+* Updated script
 
 = 2.2.2 =
-Tested upto 3.1.3 WP     
-Fixed bugs in widget
+* Tested upto 3.1.3 WP     
+* Fixed bugs in widget
 
 = 2.1 =
-Changed http://fun.onlinerel.com  feed    
+* Changed http://fun.onlinerel.com  feed    
 
 = 2.0 =
-Tested upto 3.1.2 WP        
+* Tested upto 3.1.2 WP        
 
 = 1.9 =
-Tested upto 3.1.1 WP        
-New function created: change photo size.
+* Tested upto 3.1.1 WP        
+* New function created: change photo size.
 
 = 1.8. =
-Tested upto 3.1 WP                                                                                                                           
-Changed springfail.com feed                                                                                                                              
+* Tested upto 3.1 WP                                                                                                                           
+* Changed springfail.com feed                                                                                                                              
 
 = 1.7 =
-Updated plugin
+* Updated plugin
 
 = 1.6 =
-Updated 
+*  Updated  code
 
 = 1.5 =
-Tested upto 3.0.5 WP 
+* Tested upto 3.0.5 WP 
 
 = 1.4 =
- Fix bugs.
+ vFix bugs.
 
 = 1.3 =
-Changed works upto 3.0.3 WP 
+*  Changed works upto 3.0.3 WP 
 
 = 1.2 =
- Fix bugs.
+ * Fix bugs.
 
 = 1.1 =
-Added more  functions.
+* Added more  functions.
 
 = 1.0 =
- First stable version
+*  First stable version

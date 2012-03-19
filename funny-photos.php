@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Funny photos
-Version: 2.3
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
+Version: 2.4
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -13,6 +13,11 @@ define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
 define(Funny_photos_MAX_SHOWN_content, 3);
 define(Funny_photos_width_SHOWN_content, 100);
+
+add_action('admin_menu', 'Funny_photos_menu');
+function Funny_photos_menu() {
+	add_menu_page('Funny photos', 'Funny photos', 8, __FILE__, 'Funny_photos_options');
+}
 
 function Funny_photos_widget_ShowRss($args)
 {
@@ -86,11 +91,6 @@ function Funny_photos_widget_Admin()
 	<?php
 }
 
-add_action('admin_menu', 'Funny_photos_menu');
-function Funny_photos_menu() {
-	add_options_page('Funny photos', 'Funny photos', 8, __FILE__, 'Funny_photos_options');
-}
-	
 	add_filter("plugin_action_links", 'Funny_photos_ActionLink', 10, 2);
 function Funny_photos_ActionLink( $links, $file ) {
 	    static $this_plugin;		
@@ -184,7 +184,9 @@ function Funny_photos_options() {
 <hr />                                        
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
-<p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
+<p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3>
+<h3>More <a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank"> WordPress Plugins</a></h3>
+</p>
   	</div>
 	<?php
 }
