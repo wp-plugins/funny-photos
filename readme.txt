@@ -1,7 +1,7 @@
 === Funny Photos ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: funny photos, funny jokes, funny video, widget, jokes, video, image, images, funny, post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
+Tags: funny photos, funny jokes, funny video, widget, jokes, video, image, images, funny, post, posts, link, promote, SEO, category, sidebar, feed, rss
 Requires at least: 2.5
 Tested up to: 3.3.1
 Stable tag: trunk
