@@ -26,6 +26,10 @@ Add Funny Photos to your sidebar on your blog using  a widget. Photos are saved 
  
 == Changelog ==
 
+= 2.5 =
+* Tested upto WordPress 3.3.2
+* Updated code
+
 = 2.4 =
 * Updated readme.txt
 * Updated code
