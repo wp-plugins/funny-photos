@@ -3,16 +3,23 @@
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
-Version: 2.5
+Version: 2.6
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
 
-define(Funny_photos_URL_RSS_DEFAULT, 'http://www.jokequiz.com/category/interesting/feed/');
+define(Funny_photos_URL_RSS_DEFAULT, 'http://www.elipets.com/category/pets-for-sale/feed/');
 define(Funny_photos_TITLE, 'Funny photos');
 define(Funny_photos_MAX_SHOWN_widg, 3);
 define(Funny_photos_MAX_SHOWN_content, 3);
 define(Funny_photos_width_SHOWN_content, 100);
+
+function Funny_photos_widget_Init()
+{
+  register_sidebar_widget(__('Funny photos'), 'Funny_photos_widget_ShowRss');
+  register_widget_control(__('Funny photos'), 'Funny_photos_widget_Admin', 500, 250);
+}
+add_action("plugins_loaded", "Funny_photos_widget_Init");
 
 add_action('admin_menu', 'Funny_photos_menu');
 function Funny_photos_menu() {
@@ -192,10 +199,4 @@ Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
 	<?php
 }
 
-function Funny_photos_widget_Init()
-{
-  register_sidebar_widget(__('Funny photos'), 'Funny_photos_widget_ShowRss');
-  register_widget_control(__('Funny photos'), 'Funny_photos_widget_Admin', 500, 250);
-}
-add_action("plugins_loaded", "Funny_photos_widget_Init");
 ?>
