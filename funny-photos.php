@@ -3,7 +3,7 @@
 Plugin Name: Funny photos
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
-Version: 2.6
+Version: 2.7
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -22,6 +22,7 @@ function Funny_photos_widget_Init()
 add_action("plugins_loaded", "Funny_photos_widget_Init");
 
 add_action('admin_menu', 'Funny_photos_menu');
+
 function Funny_photos_menu() {
 	add_menu_page('Funny photos', 'Funny photos', 8, __FILE__, 'Funny_photos_options');
 }
@@ -60,13 +61,9 @@ function Funny_photos_widget_ShowRss($args)
  $output .= '</ul> ';	    
                                                                                                                        
 extract($args);	
-
  echo $before_widget;  
-
  echo $before_title . $title . $after_title;  
-
  echo $output;  
-
  echo $after_widget;  
 }
 
@@ -93,8 +90,10 @@ function Funny_photos_widget_Admin()
 	$Funny_photos_widget_RSS_count_widg = $options['Funny_photos_widget_RSS_count_widg'];
 ?>	
 	<p><label for="Funny_photos_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="Funny_photos_widget_url_title" name="Funny_photos_widget_url_title" type="text" value="<?php echo $Funny_photos_widget_url_title; ?>" /></label></p> 
-	<p><label for="Funny_photos_widget_RSS_count_widg"><?php _e('Count Items To Show:'); ?> <input  id="Funny_photos_widget_RSS_count_widg" name="Funny_photos_widget_RSS_count_widg" size="2" maxlength="2" type="text" value="<?php echo $Funny_photos_widget_RSS_count_widg?>" /></label></p>	
-	<br clear='all'></p>
+	<p><label for="Funny_photos_widget_RSS_count_widg"><?php _e('Count Items To Show:'); ?>
+	<input  id="Funny_photos_widget_RSS_count_widg" name="Funny_photos_widget_RSS_count_widg" size="2" maxlength="2" type="text" value="<?php echo $Funny_photos_widget_RSS_count_widg?>" />
+	</label></p>	
+	<br clear='all'>
 	<?php
 }
 
@@ -188,10 +187,10 @@ function Funny_photos_options() {
 	 </label>
 	 <input type="submit" name="b_update" class="button-primary" value="  Save Changes  " /></p>
 	 	</form> 
-		Set <b>0</b> to disable boxes after the posts.                                                                      
+		Set  <strong>0 </strong> to disable boxes after the posts.                                                                      
 <hr />                                        
-<p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
-Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
+<p> <strong>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
+Add Funny Photos to your sidebar on your blog using  a widget. </strong> </p>
 <p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3>
 <h3>More <a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank"> WordPress Plugins</a></h3>
 </p>
