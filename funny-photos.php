@@ -1,18 +1,18 @@
 <?php
 /*
 Plugin Name: Funny photos
-Plugin URI: http://www.onlinerel.com/wordpress-plugins/
+Plugin URI: http://www.premiumresponsive.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
-Version: 2.7
+Version: 2.8
 Author: A.Kilius
-Author URI: http://www.onlinerel.com/wordpress-plugins/
+Author URI: http://www.premiumresponsive.com/wordpress-plugins/
 */
 
-define(Funny_photos_URL_RSS_DEFAULT, 'http://www.elipets.com/category/pets-for-sale/feed/');
 define(Funny_photos_TITLE, 'Funny photos');
-define(Funny_photos_MAX_SHOWN_widg, 3);
+define(Funny_photos_URL_RSS_DEFAULT, 'http://www.jokerhub.com/category/best-photos/feed/');
 define(Funny_photos_MAX_SHOWN_content, 3);
 define(Funny_photos_width_SHOWN_content, 100);
+define(Funny_photos_MAX_SHOWN_widg, 3);
 
 function Funny_photos_widget_Init()
 {
@@ -22,7 +22,6 @@ function Funny_photos_widget_Init()
 add_action("plugins_loaded", "Funny_photos_widget_Init");
 
 add_action('admin_menu', 'Funny_photos_menu');
-
 function Funny_photos_menu() {
 	add_menu_page('Funny photos', 'Funny photos', 8, __FILE__, 'Funny_photos_options');
 }
@@ -34,7 +33,6 @@ function Funny_photos_widget_ShowRss($args)
 		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$options[ 'Funny_photos_widget_RSS_count_widg' ] = Funny_photos_MAX_SHOWN_widg;
 	}
-
  $feed = Funny_photos_URL_RSS_DEFAULT;
 	$title = $options[ 'Funny_photos_widget_url_title' ];
 	$rss = fetch_feed( $feed );
@@ -97,8 +95,7 @@ function Funny_photos_widget_Admin()
 	<?php
 }
 
-	add_filter("plugin_action_links", 'Funny_photos_ActionLink', 10, 2);
-
+add_filter("plugin_action_links", 'Funny_photos_ActionLink', 10, 2);
 function Funny_photos_ActionLink( $links, $file ) {
 	    static $this_plugin;		
 		if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__); 
@@ -112,9 +109,7 @@ function Funny_photos_ActionLink( $links, $file ) {
 add_filter('the_content', 'Funny_photos_content', 48);
 function Funny_photos_content($content) {
 	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
-
 	$options = get_option('Funny_photos_widget');
-
 	if( $options == false ) {
 		$options[ 'Funny_photos_widget_url_title' ] = Funny_photos_TITLE;
 		$options[ 'Funny_photos_widget_RSS_count_widg' ] = Funny_photos_MAX_SHOWN_widg;
@@ -135,7 +130,6 @@ $rss = fetch_feed( $feed );
 				endif;
 	if($items) { 
  	foreach ( $items as $item ) :
-				// Create post object
   $titlee = trim($item->get_title()); 
   if ($enclosure = $item->get_enclosure())
 	{ 
@@ -191,11 +185,11 @@ function Funny_photos_options() {
 <hr />                                        
 <p> <strong>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget. </strong> </p>
-<p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3>
-<h3>More <a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank"> WordPress Plugins</a></h3>
+<p> <h3>Add the widget "Funny photos"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3> </p>
+<p> 
+<h3>More <a href="http://www.premiumresponsive.com/wordpress-plugins/" target="_blank"> WordPress Plugins</a></h3>
 </p>
   	</div>
 	<?php
 }
-
 ?>
