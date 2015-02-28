@@ -3,7 +3,7 @@
 Plugin Name: Funny photos
 Plugin URI: http://www.premiumresponsive.com/wordpress-plugins/
 Description: Plugin "Funny Photos" displays Funny photos on your blog. There are over 5,000 photos.
-Version: 2.8
+Version: 2.9
 Author: A.Kilius
 Author URI: http://www.premiumresponsive.com/wordpress-plugins/
 */

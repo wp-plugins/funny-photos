@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.premiumresponsive.com/wordpress-plugins/
 Tags: funny photos, funny jokes, funny video, widget, jokes, video, image, images, funny, post, posts, link, promote, sidebar, feed, rss
 Requires at least: 3.0
-Tested up to: 3.6
+Tested up to: 4.1.1
 Stable tag: trunk
 
 Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
@@ -27,6 +27,11 @@ Photos are saved on our database, so you don't need to have space for all that i
 2. Funny Photos boxes after the posts
  
 == Changelog ==
+
+= 2.9 =
+* Tested up to 4.1.1 WP    
+* Updated code
+
 
 = 2.8 =
 * Tested up to 3.6 WP    
